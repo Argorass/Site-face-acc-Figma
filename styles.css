@@ -156,14 +156,23 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+  .navbar > div:first-child {
+    margin-top: 10px;
+  }
   .navList {
-    margin-top: 20px;
+    display: flex; /* Set to inline flex */
+    justify-content: space-between;
+    width: 100%; /* Make it span the entire width */
   }
   .navList ul {
+    display: flex; /* Display list items inline */
     padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    width: 100%; /* Ensure it takes full width */
   }
   .list-item {
-    display: block;
+    display: inline-block; /* Ensure items are inline */
     padding: 10px;
     text-align: center;
   }
