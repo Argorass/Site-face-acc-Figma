@@ -179,34 +179,47 @@ footer {
     text-align: center;
   }
 
+  /* Image positions: Keep them inline with a gap between */
   .img-left,
   .img-right {
     position: relative;
     top: auto;
     left: auto;
-    margin: 10px 0;
-    width: 100%;
+    margin: 10px;
+    width: 43.2%; /* Reduced by 10% from 48% */
+    display: inline-block;
   }
 
-  /* List, Sell, Grow Section */
+  /* List, Sell, Grow Section: Keep layout but adjust width */
   .list-sell-grow {
     margin-top: 10%;
   }
 
   .container-list {
-    display: block; /* Stack vertically */
+    display: flex; /* Keep items in a row */
+    justify-content: space-between;
     padding: 0 20px;
   }
 
   .container-list > div {
-    width: 100%;
-    margin: 10px 0;
+    width: 27% !important; /* Reduced width to 90% of the original */
+    margin: 10px;
   }
 
-  /* Cards Section */
+  /* Cards Section: Keep in a row with a gap */
+  .cards {
+    display: flex;
+    justify-content: space-between; /* Add gap between cards */
+    flex-wrap: wrap; /* Allow wrapping */
+    margin-top: 20px;
+  }
+
   .card {
+    width: 43.2%; /* Reduced by 10% from 48% */
+    margin-top: 20px;
+    display: flex;
     flex-direction: column;
-    margin-top: 5%;
+    align-items: center;
   }
 
   .card-text {
@@ -217,7 +230,7 @@ footer {
 
   .card-img {
     margin: 0 0 10px 0;
-    width: 100%;
+    width: 90%; /* Reduced by 10% */
   }
 
   /* Footer */
