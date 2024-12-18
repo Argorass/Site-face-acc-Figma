@@ -117,17 +117,23 @@ h1 {
 .card {
   display: flex;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 30px; /* Gap between card items */
+  flex-direction: row;
+  gap: 30px; /* 30px gap between text and image */
 }
 
 .card-text {
-  margin-left: 10%;
-  margin-right: 10%;
+  flex: 1;
+  text-align: left;
 }
 
 .card-img {
-  margin-right: 5%;
-  margin-left: 5%;
+  flex: 1;
+  text-align: center;
+}
+
+.card-img img {
+  max-width: 100%; /* Ensure images scale properly */
 }
 
 /* Footer Styles */
@@ -195,16 +201,16 @@ footer {
   /* Cards Section: Keep in a row with a gap */
   .cards {
     display: flex;
-    justify-content: space-between; /* Add gap between cards */
-    flex-wrap: wrap; /* Allow wrapping */
+    flex-direction: column; /* Stack cards vertically */
     margin-top: 20px;
   }
   .card {
-    width: 43.2%; /* Reduced by 10% from 48% */
-    margin-top: 20px;
+    width: 100%; /* Full width of the container */
+    margin-top: 30px; /* 30px gap between cards */
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Text and image side by side */
     align-items: center;
+    gap: 30px; /* 30px gap between text and image */
   }
   .card-text {
     margin-left: 0;
@@ -213,7 +219,10 @@ footer {
   }
   .card-img {
     margin: 0 0 10px 0;
-    width: 90%; /* Reduced by 10% */
+    width: 90%; /* Reduce width of images */
+  }
+  .card-img img {
+    max-width: 100%; /* Ensure the images are responsive */
   }
   /* Footer */
   .container {
