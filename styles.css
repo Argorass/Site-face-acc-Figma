@@ -212,6 +212,8 @@ footer {
     display: flex;
     flex-direction: column; /* Stack cards vertically */
     margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .card {
     width: 100%; /* Full width of the container */
