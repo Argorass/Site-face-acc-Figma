@@ -1,89 +1,114 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
 body {
   margin: 0;
   font-family: DM Sans, sans-serif;
 }
+
 .list-item a {
   color: black;
 }
+
 a {
   text-decoration: none;
 }
+
 a:hover {
   color: #2f70fe;
 }
+
 .demo a {
   color: #2f70fe;
 }
+
 .demo:hover {
   color: white;
   background-color: #2f70fe;
 }
+
 .demo:hover > a {
   color: white;
 }
+
 ul {
   list-style-type: none;
 }
+
 li {
   display: inline;
   padding: 10px;
   margin: 5px;
 }
+
 .demo {
   border: 1px solid #2f70fe;
   color: #2f70fe;
 }
+
 .navbar {
   display: flex;
   justify-content: space-around;
 }
+
+.navList {
+}
+
 h1 {
   font-size: 48px;
   margin: 0px;
 }
+
 .registers {
-  background-image: url(../images/Rectangle.png);
+  background-image: url(./images/Rectangle.png);
   background-size: 100%;
-  /* repeat: no-repeat; */
   color: white;
   position: relative;
   height: 467px;
 }
+
 .today-register {
   transition: transform 2s ease-in-out;
 }
+
 .today-register:hover {
   transform: scale(1.1);
 }
+
 .register-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
 }
+
 .register-text a {
   color: white;
   background-color: black;
   padding: 15px;
   margin: 10px;
 }
+
 .img-left {
   position: absolute;
   top: 60%;
 }
+
 .img-right {
   position: absolute;
   top: 35%;
   left: 70%;
 }
+
 .list-sell-grow {
   margin-top: 10%;
 }
+
 .container-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Adjust for smaller screens */
 }
+
 .container-list > div {
   width: 236px;
   display: flex;
@@ -92,27 +117,118 @@ h1 {
   margin: 10px;
   padding: 10px;
 }
+
 .card {
   display: flex;
   align-items: center;
   margin-top: 10%;
 }
+
 .card-text {
   margin-left: 10%;
   margin-right: 10%;
 }
+
 .card-img {
   margin-right: 5%;
   margin-left: 5%;
 }
-/* footer styles */
+
+/* Footer Styles */
 footer {
   color: white;
   background-color: black;
 }
+
 .container {
   display: flex;
   justify-content: space-around;
   padding-top: 5%;
   margin-top: 10%;
+}
+
+/* Tablet (768px) adjustments */
+@media (max-width: 768px) {
+  /* Navbar: Stack the nav items vertically */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navList {
+    margin-top: 20px;
+  }
+
+  .navList ul {
+    padding: 0;
+  }
+
+  .list-item {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .registers {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .register-text {
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  .img-left,
+  .img-right {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  /* List, Sell, Grow Section */
+  .list-sell-grow {
+    margin-top: 10%;
+  }
+
+  .container-list {
+    display: block; /* Stack vertically */
+    padding: 0 20px;
+  }
+
+  .container-list > div {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Cards Section */
+  .card {
+    flex-direction: column;
+    margin-top: 5%;
+  }
+
+  .card-text {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .card-img {
+    margin: 0 0 10px 0;
+    width: 100%;
+  }
+
+  /* Footer */
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .container > div {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
