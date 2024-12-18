@@ -253,14 +253,14 @@ footer {
   }
 
   /* Footer */
-  .container {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
+  footer .container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
   }
 
-  .container > div {
+  footer .container > div {
     margin-bottom: 20px;
+    margin-left: 10px;
     text-align: center;
   }
 }
